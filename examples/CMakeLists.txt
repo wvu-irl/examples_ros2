@@ -43,10 +43,22 @@ ament_target_dependencies(log_in_main_node rclcpp)
 add_executable(log_severity_and_flags_node src/logging/log_severity_and_flags_node.cpp)
 ament_target_dependencies(log_severity_and_flags_node rclcpp)
 
+add_executable(log_expression_node src/logging/log_expression_node.cpp)
+ament_target_dependencies(log_expression_node rclcpp)
+
+add_executable(log_once_node src/logging/log_once_node.cpp)
+ament_target_dependencies(log_once_node rclcpp)
+
+add_executable(log_skipfirst_node src/logging/log_skipfirst_node.cpp)
+ament_target_dependencies(log_skipfirst_node rclcpp)
+
 install(TARGETS
   log_in_class_node
   log_in_main_node
   log_severity_and_flags_node
+  log_expression_node
+  log_once_node
+  log_skipfirst_node
   DESTINATION lib/${PROJECT_NAME})
 
 ############ MULTITHREADED EXAMPLES ########################

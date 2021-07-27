@@ -5,7 +5,7 @@
  *
  * @section DESCRIPTION
  *
- * This is an example script for using ROS2 logging for log once
+ * This is an example script for using ROS2 logging for log skip first
  */
 
 #include "rclcpp/rclcpp.hpp"
@@ -19,12 +19,12 @@ int main(int argc, char *argv[])
     int i = 1;
     while (i <= 3)
     {
-        RCLCPP_INFO_ONCE(log_node.get_logger(), "I only get published once, count: %i", i);
+        RCLCPP_INFO_SKIPFIRST(log_node.get_logger(), "I don't get published the first time; count: %i", i);
         ++i;
     }
 
-    RCLCPP_INFO_ONCE(log_node.get_logger(), "But I don't (or do I?)");
-    RCLCPP_INFO_ONCE(log_node.get_logger(), "But I don't (or do I?)");
+    RCLCPP_INFO_SKIPFIRST(log_node.get_logger(), "Neither do we");
+    RCLCPP_INFO_SKIPFIRST(log_node.get_logger(), "Neither do we");
 
     rclcpp::shutdown();
     return 0;
