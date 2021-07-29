@@ -52,6 +52,9 @@ ament_target_dependencies(log_once_node rclcpp)
 add_executable(log_skipfirst_node src/logging/log_skipfirst_node.cpp)
 ament_target_dependencies(log_skipfirst_node rclcpp)
 
+add_executable(log_function_node src/logging/log_function_node.cpp)
+ament_target_dependencies(log_function_node rclcpp)
+
 install(TARGETS
   log_in_class_node
   log_in_main_node
@@ -59,6 +62,7 @@ install(TARGETS
   log_expression_node
   log_once_node
   log_skipfirst_node
+  log_function_node
   DESTINATION lib/${PROJECT_NAME})
 
 ############ MULTITHREADED EXAMPLES ########################
