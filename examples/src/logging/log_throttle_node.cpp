@@ -5,7 +5,7 @@
  *
  * @section DESCRIPTION
  *
- * This is an example script for using ROS2 stream logging
+ * This is an example script for using ROS2 throttle logging
  */
 #include <chrono>
 
