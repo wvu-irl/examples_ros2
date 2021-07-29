@@ -1,5 +1,5 @@
 /**
- * @file log_in_class_node.cpp
+ * @file log_severity_and_flags_node.cpp
  * @author  Jared J Beard <jbeard6@mix.wvu.edu>
  * @version 1.0
  *

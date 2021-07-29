@@ -19,6 +19,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -85,6 +87,12 @@ install(TARGETS
 
 
 ############ SPIN EXAMPLES ########################
+add_executable(spin_node src/spin/spin_node.cpp)
+ament_target_dependencies(spin_node rclcpp std_msgs)
+
+install(TARGETS
+  spin_node
+  DESTINATION lib/${PROJECT_NAME})
 
 
 ament_package()

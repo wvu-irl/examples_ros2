@@ -5,7 +5,7 @@
  *
  * @section DESCRIPTION
  *
- * This is an script function for using ROS2 logging in a Node class
+ * This is an example script for using ROS2 logging in a Node class
  */
 
 #include <chrono>
