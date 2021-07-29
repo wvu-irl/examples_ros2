@@ -11,7 +11,7 @@
 #include "rclcpp/rclcpp.hpp"
 
 
-// TODO: Try lambdas and make work for nonmember functions of struct/class
+// TODO: Try to make work for non-static member functions of struct/class
 
 int a_true_function()
 {
