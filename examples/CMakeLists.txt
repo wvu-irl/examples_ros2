@@ -18,6 +18,8 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -55,6 +57,12 @@ ament_target_dependencies(log_skipfirst_node rclcpp)
 add_executable(log_function_node src/logging/log_function_node.cpp)
 ament_target_dependencies(log_function_node rclcpp)
 
+add_executable(log_stream_node src/logging/log_stream_node.cpp)
+ament_target_dependencies(log_stream_node rclcpp geometry_msgs)
+
+add_executable(log_throttle_node src/logging/log_throttle_node.cpp)
+ament_target_dependencies(log_throttle_node rclcpp)
+
 install(TARGETS
   log_in_class_node
   log_in_main_node
@@ -63,6 +71,8 @@ install(TARGETS
   log_once_node
   log_skipfirst_node
   log_function_node
+  log_stream_node
+  log_throttle_node
   DESTINATION lib/${PROJECT_NAME})
 
 ############ MULTITHREADED EXAMPLES ########################

@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
-    rclcpp::Node log_node("log_in_class_node");
+    rclcpp::Node log_node("log_function_node");
 
     RCLCPP_INFO_FUNCTION(log_node.get_logger(), a_true_function, "This function was true");
 

@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
-    rclcpp::Node log_node("log_in_class_node");
+    rclcpp::Node log_node("log_skipfirst_node");
 
     int i = 1;
     while (i <= 3)

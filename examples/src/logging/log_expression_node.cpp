@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
-    rclcpp::Node log_node("log_in_class_node");
+    rclcpp::Node log_node("log_expression_node");
 
     RCLCPP_INFO_EXPRESSION(log_node.get_logger(), 2 + 2 == 4, "This is expression is true");
 

@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
-    rclcpp::Node log_node("log_in_class_node");
+    rclcpp::Node log_node("log_in_main_node");
 
     RCLCPP_INFO(log_node.get_logger(), "This is an example of a logger in main");
 

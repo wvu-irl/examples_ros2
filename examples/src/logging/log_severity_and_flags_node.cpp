@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 {
     rclcpp::init(argc, argv);
 
-    rclcpp::Node log_node("log_in_class_node");
+    rclcpp::Node log_node("log_sev_flags_node");
 
     RCLCPP_DEBUG(log_node.get_logger(), "This is an example of a log message at severity DEBUG");
 
