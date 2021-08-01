@@ -38,46 +38,46 @@ if(BUILD_TESTING)
 endif()
 
 ############ LOGGING EXAMPLES ########################
-add_executable(log_in_class_node src/logging/log_in_class_node.cpp)
-ament_target_dependencies(log_in_class_node rclcpp)
+add_executable(log_in_class src/logging/log_in_class.cpp)
+ament_target_dependencies(log_in_class rclcpp)
 
-add_executable(log_in_main_node src/logging/log_in_main_node.cpp)
-ament_target_dependencies(log_in_main_node rclcpp)
+add_executable(log_in_main src/logging/log_in_main.cpp)
+ament_target_dependencies(log_in_main rclcpp)
 
-add_executable(log_severity_and_flags_node src/logging/log_severity_and_flags_node.cpp)
-ament_target_dependencies(log_severity_and_flags_node rclcpp)
+add_executable(log_severity_and_flags src/logging/log_severity_and_flags.cpp)
+ament_target_dependencies(log_severity_and_flags rclcpp)
 
-add_executable(log_expression_node src/logging/log_expression_node.cpp)
-ament_target_dependencies(log_expression_node rclcpp)
+add_executable(log_expression src/logging/log_expression.cpp)
+ament_target_dependencies(log_expression rclcpp)
 
-add_executable(log_once_node src/logging/log_once_node.cpp)
-ament_target_dependencies(log_once_node rclcpp)
+add_executable(log_once src/logging/log_once.cpp)
+ament_target_dependencies(log_once rclcpp)
 
-add_executable(log_skipfirst_node src/logging/log_skipfirst_node.cpp)
-ament_target_dependencies(log_skipfirst_node rclcpp)
+add_executable(log_skipfirst src/logging/log_skipfirst.cpp)
+ament_target_dependencies(log_skipfirst rclcpp)
 
-add_executable(log_function_node src/logging/log_function_node.cpp)
-ament_target_dependencies(log_function_node rclcpp)
+add_executable(log_function src/logging/log_function.cpp)
+ament_target_dependencies(log_function rclcpp)
 
-add_executable(log_stream_node src/logging/log_stream_node.cpp)
-ament_target_dependencies(log_stream_node rclcpp geometry_msgs)
+add_executable(log_stream src/logging/log_stream.cpp)
+ament_target_dependencies(log_stream rclcpp geometry_msgs)
 
-add_executable(log_throttle_node src/logging/log_throttle_node.cpp)
-ament_target_dependencies(log_throttle_node rclcpp)
+add_executable(log_throttle src/logging/log_throttle.cpp)
+ament_target_dependencies(log_throttle rclcpp)
 
 install(TARGETS
-  log_in_class_node
-  log_in_main_node
-  log_severity_and_flags_node
-  log_expression_node
-  log_once_node
-  log_skipfirst_node
-  log_function_node
-  log_stream_node
-  log_throttle_node
+  log_in_class
+  log_in_main
+  log_severity_and_flags
+  log_expression
+  log_once
+  log_skipfirst
+  log_function
+  log_stream
+  log_throttle
   DESTINATION lib/${PROJECT_NAME})
 
-############ MULTITHREADED EXAMPLES ########################
+############ EXECUTOR EXAMPLES ########################
 
 
 ############ NODES EXAMPLES ########################
@@ -87,11 +87,11 @@ install(TARGETS
 
 
 ############ SPIN EXAMPLES ########################
-add_executable(spin_node src/spin/spin_node.cpp)
-ament_target_dependencies(spin_node rclcpp std_msgs)
+add_executable(spin_once src/spin/spin_once.cpp)
+ament_target_dependencies(spin_once rclcpp std_msgs)
 
 install(TARGETS
-  spin_node
+  spin_once
   DESTINATION lib/${PROJECT_NAME})
 
 
