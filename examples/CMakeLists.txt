@@ -87,12 +87,12 @@ install(TARGETS
 
 
 ############ SPIN EXAMPLES ########################
-add_executable(spin_once src/spin/spin_once.cpp)
-ament_target_dependencies(spin_once rclcpp std_msgs)
+# add_executable(spin_once src/spin/spin_once.cpp)
+# ament_target_dependencies(spin_once rclcpp std_msgs)
 
-install(TARGETS
-  spin_once
-  DESTINATION lib/${PROJECT_NAME})
+# install(TARGETS
+#   spin_once
+#   DESTINATION lib/${PROJECT_NAME})
 
 
 ament_package()
